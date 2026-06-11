@@ -1,0 +1,77 @@
+export const initialTasks = [
+  // 1. Application -> 1.1 BD
+  { id: "task-4", title: "1.1.1 Étudier les bases de données accessible et utilisé pour créer notre base", description: "0,5h", status: "todo", priority: "medium", assignee: "Valentin, Hayk", category: "1.1 BD", dependencies: [] },
+  { id: "task-5", title: "1.1.2 Faire le MCD", description: "4h", status: "todo", priority: "high", assignee: "Ihor, Jean-Paul, Valentin", category: "1.1 BD", dependencies: ["task-4"] },
+  { id: "task-6", title: "1.1.3 Faire le script de création de BD", description: "1h", status: "todo", priority: "high", assignee: "Valentin", category: "1.1 BD", dependencies: ["task-5"] },
+  
+  // 1.2 IHM App -> 1.2.1 Script Python
+  { id: "task-9", title: "1.2.1.1 Coder un script python qui charge les données .csv et les met dans la base", description: "2h", status: "todo", priority: "high", assignee: "Jean-Paul, Vely", category: "1.2.1 Script Python", dependencies: ["task-21"] },
+  { id: "task-10", title: "1.2.1.2 Créer un script qui charge les données depuis la base", description: "4h", status: "todo", priority: "high", assignee: "Hayk", category: "1.2.1 Script Python", dependencies: ["task-18"] },
+  { id: "task-12", title: "1.2.1.3.1 Créer un script pour la génération des cartes", description: "2h", status: "todo", priority: "medium", assignee: "Ihor, Hayk", category: "1.2.1 Script Python", dependencies: ["task-17"] },
+  { id: "task-13", title: "1.2.1.3.2 Créer un script pour la génération des courbes", description: "4h", status: "todo", priority: "medium", assignee: "Valentin", category: "1.2.1 Script Python", dependencies: ["task-17"] },
+  { id: "task-14", title: "1.2.1.4 Créer un script qui sauvegarde les graphiques en format PNG", description: "4h", status: "todo", priority: "medium", assignee: "Jeremy", category: "1.2.1 Script Python", dependencies: ["task-19"] },
+  
+  // 1.2.1.5 Tests Python
+  { id: "task-16", title: "1.2.1.5.1 Créer les tests pour charger les données depuis la base", description: "2h", status: "todo", priority: "low", assignee: "Jean-Paul", category: "1.2.1 Tests Python", dependencies: ["task-22"] },
+  { id: "task-17", title: "1.2.1.5.2 Créer les tests pour créer les graphiques", description: "2h", status: "todo", priority: "low", assignee: "Jeremy", category: "1.2.1 Tests Python", dependencies: ["task-22"] },
+  { id: "task-18", title: "1.2.1.5.3 Créer les tests pour sauvegarder les graphiques", description: "2h", status: "todo", priority: "low", assignee: "Vely", category: "1.2.1 Tests Python", dependencies: ["task-22"] },
+  { id: "task-19", title: "1.2.1.5.4 Créer un test pour le lien avec IHM", description: "2h", status: "todo", priority: "low", assignee: "Ihor", category: "1.2.1 Tests Python", dependencies: ["task-22"] },
+  { id: "task-20", title: "1.2.1.5.5 Créer un test pour le lien avec la BD", description: "2h", status: "todo", priority: "low", assignee: "Hayk", category: "1.2.1 Tests Python", dependencies: ["task-6"] },
+  { id: "task-21", title: "1.2.1.5.6 Créer un test pour le script de remplissage", description: "2h", status: "todo", priority: "low", assignee: "Valentin", category: "1.2.1 Tests Python", dependencies: ["task-22"] },
+  
+  // Autres scripts Python
+  { id: "task-22", title: "1.2.1.6 Créer un script qui fait le lien avec BD", description: "2h", status: "todo", priority: "medium", assignee: "Jean-Paul, Vely, Jeremy", category: "1.2.1 Script Python", dependencies: ["task-20"] },
+  { id: "task-23", title: "1.2.1.7 Créer une notice d'utilisation du script Python", description: "1h", status: "todo", priority: "low", assignee: "Vely, Jeremy", category: "1.2.1 Script Python", dependencies: ["task-14"] },
+
+  // 1.2.2 C# -> Accueil
+  { id: "task-27", title: "1.2.2.1.1.1 Implémenter la carte (Avec une image Test)", description: "1h", status: "todo", priority: "high", assignee: "Valentin", category: "1.2.2 C#", dependencies: ["task-66"] },
+  { id: "task-28", title: "1.2.2.1.1.2 Implémenter l'onglet Alerte Forte", description: "2h", status: "todo", priority: "medium", assignee: "Valentin", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-29", title: "1.2.2.1.1.3 Implémenter la partie de présentation de projet", description: "0,33h", status: "todo", priority: "low", assignee: "Valentin", category: "1.2.2 C#", dependencies: [] },
+  
+  // 1.2.2 C# -> Impact
+  { id: "task-32", title: "1.2.2.1.2.1.1 Coder la partie 'Choix du type de donnée'", description: "1h", status: "todo", priority: "high", assignee: "Vely", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-33", title: "1.2.2.1.2.1.2 Coder la partie 'Sélection de la temporalité'", description: "1h", status: "todo", priority: "high", assignee: "Vely", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-35", title: "1.2.2.1.2.2.1 Lien entre les informations sélectionnées", description: "2h", status: "todo", priority: "high", assignee: "Jean-Paul", category: "1.2.2 C#", dependencies: ["task-32", "task-33"] },
+  { id: "task-36", title: "1.2.2.1.2.2.2 Coder l'affichage de la carte", description: "2h", status: "todo", priority: "high", assignee: "Jean-Paul, Valentin", category: "1.2.2 C#", dependencies: ["task-35"] },
+  
+  // 1.2.2 C# -> Evolution
+  { id: "task-38", title: "1.2.2.1.3.1 Coder un menu déroulant sur le filtre des données", description: "2h", status: "todo", priority: "medium", assignee: "Hayk", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-39", title: "1.2.2.1.3.2 Coder la mise à jour des graphiques en fonction du filtre", description: "1h", status: "todo", priority: "high", assignee: "Hayk", category: "1.2.2 C#", dependencies: ["task-38"] },
+  
+  // 1.2.2 C# -> Import
+  { id: "task-42", title: "1.2.2.1.4.1.1 Partie 'Sélectionner un séparateur'", description: "0,33h", status: "todo", priority: "low", assignee: "Ihor", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-43", title: "1.2.2.1.4.1.2 Ouvre l'interface Windows pour charger le fichier", description: "1h", status: "todo", priority: "medium", assignee: "Ihor", category: "1.2.2 C#", dependencies: [] },
+  { id: "task-44", title: "1.2.2.1.4.1.3 Lancer le script de remplissage de la base", description: "0,5h", status: "todo", priority: "high", assignee: "Ihor", category: "1.2.2 C#", dependencies: [] },
+
+  // C# finalisation
+  { id: "task-45", title: "1.2.3 Lier le code IHM avec les scripts Python", description: "4h", status: "todo", priority: "high", assignee: "Jérémy, Jean-Paul", category: "1.2 C#", dependencies: ["task-14", "task-39", "task-27", "task-28", "task-29", "task-36", "task-44"] },
+  { id: "task-46", title: "1.2.4 Refactorisation du code IHM", description: "4h", status: "todo", priority: "low", assignee: "Vely, Ihor", category: "1.2 C#", dependencies: ["task-45"] },
+  { id: "task-47", title: "1.2.5 Script pour avoir une application en .exe", description: "2h", status: "todo", priority: "medium", assignee: "Jérémy, Jean-Paul", category: "1.2 C#", dependencies: ["task-46"] },
+
+  // 1.3 & 1.4
+  { id: "task-48", title: "1.3 Remise du code", description: "1h", status: "todo", priority: "high", assignee: "Vely, Jean-Paul", category: "1.3 Remise", dependencies: ["task-47", "task-54", "task-23"] },
+  { id: "task-50", title: "1.4.1 Préparer un jeu de données pour l'importation", description: "0,5h", status: "todo", priority: "medium", assignee: "Vely", category: "1.4 Démo", dependencies: ["task-48"] },
+  { id: "task-51", title: "1.4.2 Préparer la présentation de la démonstration", description: "1h", status: "todo", priority: "high", assignee: "Vely", category: "1.4 Démo", dependencies: ["task-48"] },
+
+  // 2. Documentation
+  { id: "task-54", title: "2.1.1 Étudier la complexité des algorithmes", description: "4h", status: "todo", priority: "medium", assignee: "Jean-Paul, Jeremy", category: "2.1 Doc Stats", dependencies: ["task-14"] },
+  { id: "task-55", title: "2.1.2 Faire la régression linéaire partielle et histogramme", description: "2h", status: "todo", priority: "medium", assignee: "Jean-Paul, Jeremy", category: "2.1 Doc Stats", dependencies: ["task-54"] },
+  { id: "task-57", title: "2.2.1 Créer un dépôt git", description: "0,25h", status: "todo", priority: "high", assignee: "Valentin", category: "2.2 Git", dependencies: [] },
+  { id: "task-58", title: "2.2.2 Rédiger le compte rendu des 'Questions aux experts'", description: "15h", status: "todo", priority: "low", assignee: "Jean-Paul, Vely", category: "2.2 Git", dependencies: [] },
+  { id: "task-60", title: "2.3.1 Rédiger le compte rendu des réunions", description: "3h", status: "todo", priority: "medium", assignee: "Jean-Paul, Vely", category: "2.3 Réunions", dependencies: ["task-57"] },
+  { id: "task-61", title: "2.3.2 Préparer le diapo pour chaque réunion", description: "12h", status: "todo", priority: "medium", assignee: "Jean-Paul, Vely", category: "2.3 Réunions", dependencies: ["task-57"] },
+  { id: "task-63", title: "2.4.1 Rédiger la fiche de capitalisation", description: "4h", status: "todo", priority: "medium", assignee: "Jean-Paul, Vely", category: "2.4 REX", dependencies: ["task-48"] },
+  { id: "task-64", title: "2.4.2 Préparer le pitch en Anglais", description: "5h", status: "todo", priority: "high", assignee: "Jean-Paul, Vely", category: "2.4 REX", dependencies: ["task-63"] },
+
+  // 3. Maquette
+  { id: "task-66", title: "3.1 Faire la recherche sur la Direction Artistique", description: "1h", status: "todo", priority: "medium", assignee: "Valentin, Jeremy", category: "3. Maquette", dependencies: [] },
+  { id: "task-67", title: "3.2 Faire un première Version de la maquette", description: "2h", status: "todo", priority: "medium", assignee: "Valentin, Jeremy", category: "3. Maquette", dependencies: ["task-66"] },
+  { id: "task-68", title: "3.3 Faire la version finale de la maquette", description: "6h", status: "todo", priority: "high", assignee: "Valentin, Jeremy", category: "3. Maquette", dependencies: ["task-67"] }
+];
+
+export const columns = [
+  { id: "todo", title: "À faire" },
+  { id: "in-progress", title: "En cours" },
+  { id: "review", title: "En révision" },
+  { id: "done", title: "Terminé" }
+];
